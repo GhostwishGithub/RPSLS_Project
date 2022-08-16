@@ -54,3 +54,52 @@ class Game():
                 print("Scissors cut paper! Player 1 wins!")
                 #count up player 1's wins
             elif self.player_two.chosen_gesture == 'lizard':
+                print("Scissors decapitates lizard! Player 1 wins!")
+                #count up player 1's wins
+            elif self.player_two.chosen_gesture == 'spock':
+                print("Spock SNASH scissors! Player 2 wins!")
+                #count up player 2's wins
+            elif self.player_two.chosen_gesture == 'rock':
+                print("Rock SMASH scissors! Player 2 wins!")
+                #count up player 2's wins
+        if self.player_one.chosen_gesture == 'paper':
+            if self.player_two.chosen_gesture == 'scissors':
+                print("Scissors cut paper! Player 2 wins!")
+                #count up player 2's wins
+            elif self.player_two.chosen_gesture == 'lizard':
+                print("Lizard eats paper! Burp! Player 2 wins!")
+                #count up player 2's wins
+            elif self.player_two.chosen_gesture == 'spock':
+                print("Paper disproves Spock! Take that nerd! Player 1 wins!")
+                #count up player 1's wins
+            elif self.player_two.chosen_gesture == 'rock':
+                print("Paper covers Rock! Player 1 wins!")
+                #count up player 1's wins
+        if self.player_one.chosen_gesture == 'lizard':
+            if self.player_two.chosen_gesture == 'scissors':
+                print("Scissors decapitate lizard! Player 2 wins!")
+                #count up player 2's wins
+            elif self.player_two.chosen_gesture == 'paper':
+                print("Lizard eats paper! Burp! Player 1 wins!")
+                #count up player 1's wins
+            elif self.player_two.chosen_gesture == 'spock':
+                print("Lizard poisons Spock! Player 1 wins!")
+                #count up player 1's wins
+            elif self.player_two.chosen_gesture == 'rock':
+                print("Rock crushes lizard! Player 2 wins!")
+                #count up player 2's wins
+        if self.player_one.chosen_gesture == 'Spock':
+            if self.player_two.chosen_gesture == 'scissors':
+                print("Spock SNASH scissors! Player 1 wins!")
+                #count up player 1's wins
+            elif self.player_two.chosen_gesture == 'paper':
+                print("Paper disproves Spock! Take that nerd! Player 2 wins!")
+                #count up player 2's wins
+            elif self.player_two.chosen_gesture == 'lizard':
+                print("Lizard poisons Spock! Player 2 wins!")
+                #count up player 2's wins
+            elif self.player_two.chosen_gesture == 'rock':
+                print("Spock vaporizes Rock! Player 1 wins!")
+                #count up player 1's wins
+        
+        
