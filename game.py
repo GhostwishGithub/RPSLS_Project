@@ -1,7 +1,6 @@
 class Game():
-    def __init__(self, gestures):
-        gestures = gestures['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
-
+    def __init__(self):
+        pass
     def the_welcome(self):
         print("Welcome to the game!")
         print("""
@@ -21,5 +20,14 @@ class Game():
 
     def run_game(self, round):
         round = 0
+        user_choice = input("Would you like to play against the AI? y/n:")
+        if user_choice == 'y':
+            pass #this is where it will go into singleplayer
+        elif user_choice == 'n':
+            pass #this is where it will go into multiplayer
+        else:
+            print("Uh, care to try again?")
+            #maybe loop back into the greeting from here?
+        
 
 
