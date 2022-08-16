@@ -1,6 +1,11 @@
+from human import Human
+from ai import AI
+
 class Game():
     def __init__(self):
-        pass
+        self.player_one == Human()
+        self.player_two == Human()
+        self.player_three == AI()
     def the_welcome(self):
         print("Welcome to the game!")
         print("""
@@ -18,16 +23,21 @@ class Game():
         Got it? Good.
         """)
 
-    def run_game(self, round):
-        round = 0
+    def run_game(self):
+        print(self.the_welcome)
+        self.wins = 0
         user_choice = input("Would you like to play against the AI? y/n:")
         if user_choice == 'y':
-            pass #this is where it will go into singleplayer
+            self.player_two == self.player_three
         elif user_choice == 'n':
-            pass #this is where it will go into multiplayer
+            print("Okay! Two player it is!")
         else:
             print("Uh, care to try again?")
-            #maybe loop back into the greeting from here?
+            self.run_game
+        self.player_one.choose_gesture()
+        self.player_two.choose_gesture()
+        self.battle_phase() #We are right here! Breaking for break time. Need to come up with a way to record wins inside of battle_phase. 
+        #Maybe define it as Game variable?
         
 
     def display_winner(self):
