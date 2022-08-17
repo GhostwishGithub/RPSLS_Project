@@ -38,7 +38,7 @@ class Game:
         else:
             print("Uh, care to try again?")
             self.run_game
-        while self.player_one.wins <= 2 and self.player_two.wins <= 2:
+        while self.player_one.wins < 2 and self.player_two.wins < 2:
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
             self.battle_phase() #We are right here! Breaking for break time. Need to come up with a way to record wins inside of battle_phase. 
