@@ -27,17 +27,6 @@ class Game:
 
     def run_game(self):
         print(self.the_welcome)
-        user_choice = input("Would you like to play against the AI? y/n:")
-        if user_choice == 'y':
-            self.player_two = AI()
-            self.player_one.enter_name()
-        elif user_choice == 'n':
-            print("Okay! Two player it is!")
-            self.player_one.enter_name()
-            self.player_two.enter_name()
-        else:
-            print("Uh, care to try again?")
-            self.run_game
         while self.player_one.wins < 2 and self.player_two.wins < 2:
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
@@ -45,6 +34,20 @@ class Game:
         #Maybe define it as Game variable?
         self.display_winner()
         
+    def choose_mode(self):
+        user_choice = input("Would you like to play against the AI? y/n:")
+        if user_choice == 'y':
+            self.player_two = AI()
+            self.player_one.enter_name()
+            self.run_game()
+        elif user_choice == 'n':
+            print("Okay! Two player it is!")
+            self.player_one.enter_name()
+            self.player_two.enter_name()
+            self.run_game()
+        else:
+            print("Uh, care to try again?")
+            self.choose_mode()
 
     def display_winner(self):
         if (self.player_one.wins == 2):
