@@ -1,4 +1,4 @@
 from game import Game
 
 game_one = Game()
-game_one.choose_mode()
+game_one.run_game()

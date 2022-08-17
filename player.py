@@ -1,5 +1,7 @@
-class Player:
+from gesture import Gesture
+
+class Player(Gesture):
     
     def __init__(self):
-        self.gestures = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+        super().__init__()
         self.wins = 0

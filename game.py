@@ -26,7 +26,8 @@ class Game:
         """)
 
     def run_game(self):
-        print(self.the_welcome)
+        self.the_welcome()
+        self.choose_mode()
         while self.player_one.wins < 2 and self.player_two.wins < 2:
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
@@ -39,12 +40,12 @@ class Game:
         if user_choice == 'y':
             self.player_two = AI()
             self.player_one.enter_name()
-            self.run_game()
+            return
         elif user_choice == 'n':
             print("Okay! Two player it is!")
             self.player_one.enter_name()
             self.player_two.enter_name()
-            self.run_game()
+            return
         else:
             print("Uh, care to try again?")
             self.choose_mode()
