@@ -1,6 +1,5 @@
 class Player:
     
-    def __init__(self, gestures, name, wins):
-        self.gestures = gestures['rock', 'paper', 'scissors', 'lizard', 'spock']
-        self.name = ''
+    def __init__(self):
+        self.gestures = ['rock', 'paper', 'scissors', 'lizard', 'spock']
         self.wins = 0

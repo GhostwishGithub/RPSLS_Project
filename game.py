@@ -3,10 +3,11 @@ from ai import AI
 
 class Game:
     def __init__(self):
-        self.player_one = Human()
-        self.player_two = Human()
+        self.player_one = Human('')
+        self.player_two = Human('')
         self.player_three = AI()
         self.wins = 0
+
     def the_welcome(self):
         print("Welcome to the game!")
         print("""
@@ -28,9 +29,12 @@ class Game:
         print(self.the_welcome)
         user_choice = input("Would you like to play against the AI? y/n:")
         if user_choice == 'y':
-            self.player_two == self.player_three
+            self.player_two = self.player_three
+            self.player_one.enter_name()
         elif user_choice == 'n':
             print("Okay! Two player it is!")
+            self.player_one.enter_name()
+            self.player_two.enter_name()
         else:
             print("Uh, care to try again?")
             self.run_game
