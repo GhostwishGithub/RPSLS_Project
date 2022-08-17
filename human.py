@@ -3,7 +3,7 @@ from player import Player
 class Human(Player):
     def __init__(self):
         super().__init__()
-        self.name = input('please eneter your name ')
+        self.name = input('please enter your name ')
 
     def choose_gesture(self):
         self.choose_gesture = self.gesture[0:4]
