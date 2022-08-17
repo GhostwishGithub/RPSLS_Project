@@ -38,18 +38,18 @@ class Game:
         else:
             print("Uh, care to try again?")
             self.run_game
-        self.player_one.choose_gesture()
-        self.player_two.choose_gesture()
         while self.player_one.wins <= 2 and self.player_two.wins <= 2:
+            self.player_one.choose_gesture()
+            self.player_two.choose_gesture()
             self.battle_phase() #We are right here! Breaking for break time. Need to come up with a way to record wins inside of battle_phase. 
         #Maybe define it as Game variable?
         self.display_winner()
         
 
     def display_winner(self):
-        if (self.player_one.player_one == 2):
+        if (self.player_one.wins == 2):
             print(f'{self.player_one.name} wins the game!')
-        elif (self.player_two.player_two == 2):
+        elif (self.player_two.wins == 2):
             print(f'{self.player_two.name} wins the game!')
         
     def battle_phase(self):
@@ -68,6 +68,9 @@ class Game:
                 print("Spock vaporizes rock! Player 2 wins!")
                 #count up player 2's wins
                 self.player_two.wins += 1
+            elif self.player_two.chosen_gesture == 'scissors':
+                print("Rock smashes scissors! Player 1 wins!")
+                self.player_one.wins += 1
         if self.player_one.chosen_gesture == 'scissors':
             if self.player_two.chosen_gesture == 'paper':
                 print("Scissors cut paper! Player 1 wins!")
@@ -119,7 +122,7 @@ class Game:
                 print("Rock crushes lizard! Player 2 wins!")
                 #count up player 2's wins
                 self.player_two.wins += 1
-        if self.player_one.chosen_gesture == 'Spock':
+        if self.player_one.chosen_gesture == 'spock':
             if self.player_two.chosen_gesture == 'scissors':
                 print("Spock SNASH scissors! Player 1 wins!")
                 #count up player 1's wins
