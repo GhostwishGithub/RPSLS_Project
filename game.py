@@ -5,7 +5,7 @@ class Game:
     def __init__(self):
         self.player_one = Human('')
         self.player_two = Human('')
-        self.player_three = AI()
+        #self.player_three = AI()
         self.wins = 0
 
     def the_welcome(self):
@@ -29,7 +29,7 @@ class Game:
         print(self.the_welcome)
         user_choice = input("Would you like to play against the AI? y/n:")
         if user_choice == 'y':
-            self.player_two = self.player_three
+            self.player_two = AI()
             self.player_one.enter_name()
         elif user_choice == 'n':
             print("Okay! Two player it is!")
@@ -59,82 +59,82 @@ class Game:
             if self.player_two.chosen_gesture == 'paper':
                 print("Paper beats rock! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'lizard':
                 print("Rock crushes lizard! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'spock':
                 print("Spock vaporizes rock! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
         if self.player_one.chosen_gesture == 'scissors':
             if self.player_two.chosen_gesture == 'paper':
                 print("Scissors cut paper! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'lizard':
                 print("Scissors decapitates lizard! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'spock':
                 print("Spock SNASH scissors! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'rock':
                 print("Rock SMASH scissors! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
         if self.player_one.chosen_gesture == 'paper':
             if self.player_two.chosen_gesture == 'scissors':
                 print("Scissors cut paper! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'lizard':
                 print("Lizard eats paper! Burp! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'spock':
                 print("Paper disproves Spock! Take that nerd! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'rock':
                 print("Paper covers Rock! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
         if self.player_one.chosen_gesture == 'lizard':
             if self.player_two.chosen_gesture == 'scissors':
                 print("Scissors decapitate lizard! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'paper':
                 print("Lizard eats paper! Burp! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'spock':
                 print("Lizard poisons Spock! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'rock':
                 print("Rock crushes lizard! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
         if self.player_one.chosen_gesture == 'Spock':
             if self.player_two.chosen_gesture == 'scissors':
                 print("Spock SNASH scissors! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
             elif self.player_two.chosen_gesture == 'paper':
                 print("Paper disproves Spock! Take that nerd! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'lizard':
                 print("Lizard poisons Spock! Player 2 wins!")
                 #count up player 2's wins
-                self.wins.player_two += 1
+                self.player_two.wins += 1
             elif self.player_two.chosen_gesture == 'rock':
                 print("Spock vaporizes Rock! Player 1 wins!")
                 #count up player 1's wins
-                self.wins.player_one += 1
+                self.player_one.wins += 1
         
         
